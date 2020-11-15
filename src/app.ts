@@ -34,7 +34,11 @@ class App {
 
     private template() {
         this.app.set('view engine', 'pug')
+        this.app.locals.pretty = true;
     }
+
+
+
 
     public listen() {
         this.app.listen(this.port, () => {
