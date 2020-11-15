@@ -5,6 +5,7 @@ import loggerMiddleware from './middleware/logger'
 
 import PostsController from './controllers/posts/posts.controller'
 import HomeController from './controllers/home/home.controller'
+import AuthController from './controllers/auth/auth.controller';
 
 
 
@@ -13,6 +14,7 @@ require('dotenv').config();
 const app = new App({
     port: parseInt(process.env.PORT) || 5000,
     controllers: [
+        new AuthController(),
         new HomeController(),
         new PostsController()
     ],

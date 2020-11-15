@@ -9,6 +9,7 @@ class App {
         this.app = express()
         this.port = appInit.port
 
+
         this.middlewares(appInit.middleWares)
         this.routes(appInit.controllers)
         this.assets()
@@ -33,7 +34,15 @@ class App {
     }
 
     private template() {
-        this.app.set('view engine', 'pug')
+        // this.app.set('view engine', 'pug')
+        const hbs = require('express-handlebars');
+        this.app.set('view engine', 'hbs')
+        this.app.engine( 'hbs', hbs( {
+            extname: 'hbs',
+            defaultView: 'default',
+            layoutsDir: __dirname + '/views/pages/',
+            partialsDir: __dirname + '/views/partials/'
+          }));
         this.app.locals.pretty = true;
     }
 
@@ -45,6 +54,9 @@ class App {
             console.log(`App listening on the http://localhost:${this.port}`)
         })
     }
+
+
+    
 }
 
 export default App

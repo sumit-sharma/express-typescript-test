@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Log in
+        meta(name='description' content='')
+        meta(name='theme-color' content='#4DA5F4')
+        link(rel='stylesheet' href="plugins/fontawesome-free/css/all.min.css")
+        link(rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+        link(rel='stylesheet' href='plugins/icheck-bootstrap/icheck-bootstrap.min.css')
+        link(rel='stylesheet' href='css/adminlte.min.css')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700')
+    body.hold-transition.login-page
+
+        .login-box
+            .login-logo
+                a(href='../../index2.html')
+                b Admin
+                | LTE
+            // /.login-logo
+        .card
+            .card-body.login-card-body
+                p.login-box-msg Sign in to start your session
+
+                form(action='../../index3.html' method='post')
+                    .input-group.mb-3
+                        input.form-control(type='email' placeholder='Email')
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-envelope
+                    .input-group.mb-3
+                        input.form-control(type='password' placeholder='Password')
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-lock
+                    .row
+                        .col-8
+                            .icheck-primary
+                                input#remember(type='checkbox')
+                                label(for='remember')
+                                    | Remember Me
+                        // /.col
+                        .col-4
+                            button.btn.btn-primary.btn-block(type='submit') Sign In
+                        // /.col
+                
+                p.mb-1
+                    a(href='forgot-password.html') I forgot my password
+                p.mb-0
+                    a.text-center(href='register.html') Register a new membership
+                // /.login-card-body
+
+
+
+        script(src='/plugins/jquery/jquery.min.js')
+        script(src='/plugins/bootstrap/js/bootstrap.bundle.min.js')
+        script(src='/js/adminlte.min.js')
+
+
+
+
+
